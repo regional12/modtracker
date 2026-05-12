@@ -1,0 +1,129 @@
+
+Action: file_editor view /app/design_guidelines.json
+Observation: [Showing lines 1-125 of 125 total] /app/design_guidelines.json:
+1|{
+2|  "theme": "dark",
+3|  "archetype": "Archetype 7: Electric & Neon (Future, Speed, Disruption) + Tactical Minimalism",
+4|  "design_philosophy": "A hacker-style, tactical gaming console interface. Extremely fast and lightweight. Matte black surfaces with 1px high-contrast borders. Neon cyan used sparingly for critical actions and active states. No unnecessary animations, purely functional but visually striking.",
+5|  "colors": {
+6|    "background": "#050505",
+7|    "surface": "#111111",
+8|    "surface_hover": "#1A1A1A",
+9|    "primary": "#00FFFF",
+10|    "primary_hover": "#33FFFF",
+11|    "text_main": "#FFFFFF",
+12|    "text_muted": "#888888",
+13|    "border": "#222222",
+14|    "border_active": "rgba(0, 255, 255, 0.5)",
+15|    "status": {
+16|      "installed": "#39FF14",
+17|      "wanted": "#00FFFF",
+18|      "broken": "#FF3131"
+19|    }
+20|  },
+21|  "typography": {
+22|    "headings": {
+23|      "font_family": "Outfit, sans-serif",
+24|      "weight": "600-800",
+25|      "tracking": "tracking-tight"
+26|    },
+27|    "body": {
+28|      "font_family": "'IBM Plex Sans', sans-serif",
+29|      "weight": "400",
+30|      "tracking": "tracking-normal"
+31|    },
+32|    "mono": {
+33|      "font_family": "'JetBrains Mono', monospace",
+34|      "weight": "500",
+35|      "tracking": "tracking-widest",
+36|      "usage": "Badges, stats, tags, and small technical text."
+37|    }
+38|  },
+39|  "spacing_and_layout": {
+40|    "philosophy": "Bento Grid (Control Room Grid). Dense, compact, structured.",
+41|    "border_radius": "rounded-sm (2px to 4px max) or sharp edges (rounded-none). Avoid soft pill shapes.",
+42|    "padding": "Generous internal padding for cards (p-6) to avoid text collision.",
+43|    "grid": {
+44|      "home_games": "grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6",
+45|      "mod_list": "Cardless list, border-b border-border, strict row layout."
+46|    }
+47|  },
+48|  "components": {
+49|    "sidebar": {
+50|      "style": "w-64 flex-shrink-0 bg-[#050505] border-r border-[#222222]",
+51|      "nav_links": "text-sm font-medium text-muted hover:text-white hover:bg-white/5. Active state: text-primary border-r-2 border-primary bg-primary/10."
+52|    },
+53|    "topbar": {
+54|      "style": "h-16 flex items-center px-8 bg-[#050505]/80 backdrop-blur-md border-b border-[#222222] sticky top-0 z-50",
+55|      "search": "bg-[#111111] border border-[#222222] focus:border-primary focus:ring-1 focus:ring-primary/50 text-white placeholder-muted px-4 py-2 rounded-sm w-96 font-mono text-sm transition-all"
+56|    },
+57|    "game_card": {
+58|      "style": "relative aspect-[3/4] rounded-sm overflow-hidden group border border-[#222222] bg-[#111111] transition-all duration-200",
+59|      "hover": "hover:border-primary hover:shadow-[0_0_15px_rgba(0,255,255,0.15)] hover:-translate-y-1",
+60|      "image_overlay": "absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent opacity-90 group-hover:opacity-70 transition-opacity",
+61|      "content": "absolute bottom-0 left-0 p-4 w-full text-left"
+62|    },
+63|    "mod_table_row": {
+64|      "style": "grid grid-cols-12 gap-4 py-4 px-2 border-b border-[#222222] hover:bg-[#111111] transition-colors items-center",
+65|      "text": "text-sm text-white"
+66|    },
+67|    "status_badge": {
+68|      "style": "font-mono text-[10px] uppercase tracking-widest px-2 py-1 rounded-sm border bg-transparent",
+69|      "installed": "border-[#39FF14] text-[#39FF14]",
+70|      "wanted": "border-[#00FFFF] text-[#00FFFF]",
+71|      "broken": "border-[#FF3131] text-[#FF3131]"
+72|    },
+73|    "buttons": {
+74|      "primary": "bg-primary text-black font-semibold rounded-sm px-4 py-2 hover:bg-primary_hover transition-colors text-sm shadow-[0_0_10px_rgba(0,255,255,0.2)]",
+75|      "secondary": "bg-transparent border border-[#222222] text-white rounded-sm px-4 py-2 hover:border-white transition-colors text-sm"
+76|    }
+77|  },
+78|  "visual_enhancers": {
+79|    "shadows": "Avoid soft drop shadows. Use 1px borders or tight glowing shadows (box-shadow: 0 0 10px rgba(x,y,z,0.2)).",
+80|    "glassmorphism": "Only for the Topbar. Heavy blur (backdrop-blur-xl) with very dark background (bg-black/80) and 1px bottom border.",
+81|    "textures": "Minimal. The UI is void-like and clean."
+82|  },
+83|  "icons": {
+84|    "library": "@phosphor-icons/react",
+85|    "instructions": "Use Phosphor icons with 'regular' or 'bold' weight to match the geometric/technical typography. Ensure to install it via 'yarn add @phosphor-icons/react'.",
+86|    "fallbacks": "If Phosphor is unavailable, use lucide-react."
+87|  },
+88|  "media": {
+89|    "game_covers": [
+90|      {
+91|        "url": "https://images.unsplash.com/photo-1590548141147-9fd4d57bfe1c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwzfHxkYXJrJTIwZ2FtaW5nJTIwY292ZXIlMjBhYnN0cmFjdHxlbnwwfHx8fDE3Nzg2MjMxMDF8MA&ixlib=rb-4.1.0&q=85",
+92|        "description": "Abstract white and red lighting - use as placeholder game cover 1",
+93|        "category": "game_cover"
+94|      },
+95|      {
+96|        "url": "https://images.unsplash.com/photo-1601498940341-16572ea1ab83?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHw0fHxkYXJrJTIwZ2FtaW5nJTIwY292ZXIlMjBhYnN0cmFjdHxlbnwwfHx8fDE3Nzg2MjMxMDF8MA&ixlib=rb-4.1.0&q=85",
+97|        "description": "White xbox controller - use as placeholder game cover 2",
+98|        "category": "game_cover"
+99|      },
+100|      {
+101|        "url": "https://images.unsplash.com/photo-1759692788195-b95da1f4a04c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwyfHxkYXJrJTIwZ2FtaW5nJTIwY292ZXIlMjBhYnN0cmFjdHxlbnwwfHx8fDE3Nzg2MjMxMDF8MA&ixlib=rb-4.1.0&q=85",
+102|        "description": "Video game controller low light - use as placeholder game cover 3",
+103|        "category": "game_cover"
+104|      }
+105|    ],
+106|    "backgrounds": [
+107|      {
+108|        "url": "https://images.unsplash.com/photo-1762009365851-c5b5b1aae3b9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA8Mzl8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbmVvbiUyMGdlb21ldHJpYyUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzc4NjIzMTA4fDA&ixlib=rb-4.1.0&q=85",
+109|        "description": "Abstract glowing squares - use as optional subtle header background or empty state visual",
+110|        "category": "background"
+111|      }
+112|    ]
+113|  },
+114|  "instructions_to_main_agent": [
+115|    "Ensure dark mode is forced on everything. Background is #050505.",
+116|    "Do not use generic Shadcn cards with thick borders or soft shadows. Customize them to be flat, bg-[#111111], with a subtle #222222 border.",
+117|    "Data tables/lists must be dense and readable. Use IBM Plex Sans for general text and JetBrains Mono for metadata (dates, statuses, categories).",
+118|    "Include 'data-testid' on all interactive elements (buttons, inputs, links).",
+119|    "Replace standard checkboxes with Shadcn customized checkboxes (cyan accent).",
+120|    "When displaying game images, use max-h-[80vh] constraints strictly for responsiveness.",
+121|    "Install `@phosphor-icons/react` for icons.",
+122|    "Install Google Fonts 'Outfit', 'IBM Plex Sans', and 'JetBrains Mono' via standard CSS import.",
+123|    "Ensure no scrolling on the sidebar; it should be fixed height (`h-screen`) and sticky. Content scrolls separately."
+124|  ]
+125|}
+[End of file]
